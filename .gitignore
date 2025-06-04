@@ -1,0 +1,49 @@
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+crash.log
+terraform.tfstate
+terraform.tfstate.backup
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# Ignore Terraform provider plugins
+.terraform/
+
+# Override files (if used)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Module download directories
+.terraform.lock.hcl
+
+# Terraform plan files
+*.plan
+
+# Local credentials (if any)
+.terraformrc
+terraform.rc
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Node or Docker context (if mixed)
+node_modules/
+.env
+.env.*
+docker-compose.override.yml
+docker-compose.dev.yml
+.docker/

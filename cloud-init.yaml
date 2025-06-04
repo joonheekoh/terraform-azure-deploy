@@ -1,0 +1,12 @@
+#cloud-config
+package_update: true
+packages:
+  - docker.io
+  - git
+
+runcmd:
+  - systemctl start docker
+  - systemctl enable docker
+  - git clone https://github.com/joonheekoh/web-server /app
+  - cd /app && docker build -t web-server .
+  - docker run -d -p 80:3000 web-server
